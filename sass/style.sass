@@ -1,0 +1,81 @@
+@mixin no-padding-margin
+	padding : 0
+	margin: 0
+
+html
+	width: 100%
+	height: 100%
+
+body
+	width: 100%
+	height: 100%
+
+.wide
+	width: 100%
+	@include no-padding-margin
+
+.slider-bullet
+	position: absolute
+	bottom: 26px
+	left: 6px
+	div
+		background: url(static/images/b21.png) no-repeat
+		overflow: hidden
+		cursor: pointer
+		background-position: -5px -5px
+		&:hover
+			background-position: -35px -5px
+	.av
+		background-position: -65px -5px
+		&:hover
+			background-position: -35px -5px
+	.dn
+		background-position: -95px -5px
+
+// SLIDER STUFF ///////////////////////////////////////////////////////////
+.jssora21l
+	width: 55px
+	height: 55px
+	top: 123px
+	left: 8px
+	position: absolute
+	cursor: pointer
+	display: block
+	background: url(static/images/a21.png) center center no-repeat
+	overflow: hidden
+	background-position: -3px -33px
+	&:hover
+		background-position: -123px -33px
+
+.jssora21ldn
+	position: absolute
+	cursor: pointer
+	display: block
+	background: url(static/images/a21.png) center center no-repeat
+	overflow: hidden
+	background-position: -243px -33px
+
+.jssora21r
+	width: 55px
+	height: 55px
+	top: 123px
+	right: 8px
+	position: absolute
+	cursor: pointer
+	display: block
+	background: url(static/images/a21.png) center center no-repeat
+	overflow: hidden
+	background-position: -63px -33px
+	&:hover
+		background-position: -183px -33px
+
+.jssora21rdn
+	position: absolute
+	cursor: pointer
+	display: block
+	background: url(static/images/a21.png) center center no-repeat
+	overflow: hidden
+	background-position: -303px -33px
+
+///////////////////////////////////////////////////////////////////////////
+

@@ -1,0 +1,104 @@
+/* line 5, sass/style.sass */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 9, sass/style.sass */
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 13, sass/style.sass */
+.wide {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 17, sass/style.sass */
+.slider-bullet {
+  position: absolute;
+  bottom: 26px;
+  left: 6px;
+}
+/* line 21, sass/style.sass */
+.slider-bullet div {
+  background: url(static/images/b21.png) no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  background-position: -5px -5px;
+}
+/* line 26, sass/style.sass */
+.slider-bullet div:hover {
+  background-position: -35px -5px;
+}
+/* line 28, sass/style.sass */
+.slider-bullet .av {
+  background-position: -65px -5px;
+}
+/* line 30, sass/style.sass */
+.slider-bullet .av:hover {
+  background-position: -35px -5px;
+}
+/* line 32, sass/style.sass */
+.slider-bullet .dn {
+  background-position: -95px -5px;
+}
+
+/* line 36, sass/style.sass */
+.jssora21l {
+  width: 55px;
+  height: 55px;
+  top: 123px;
+  left: 8px;
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  background: url(static/images/a21.png) center center no-repeat;
+  overflow: hidden;
+  background-position: -3px -33px;
+}
+/* line 47, sass/style.sass */
+.jssora21l:hover {
+  background-position: -123px -33px;
+}
+
+/* line 50, sass/style.sass */
+.jssora21ldn {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  background: url(static/images/a21.png) center center no-repeat;
+  overflow: hidden;
+  background-position: -243px -33px;
+}
+
+/* line 58, sass/style.sass */
+.jssora21r {
+  width: 55px;
+  height: 55px;
+  top: 123px;
+  right: 8px;
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  background: url(static/images/a21.png) center center no-repeat;
+  overflow: hidden;
+  background-position: -63px -33px;
+}
+/* line 69, sass/style.sass */
+.jssora21r:hover {
+  background-position: -183px -33px;
+}
+
+/* line 72, sass/style.sass */
+.jssora21rdn {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  background: url(static/images/a21.png) center center no-repeat;
+  overflow: hidden;
+  background-position: -303px -33px;
+}
