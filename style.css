@@ -143,11 +143,10 @@ body {
 
 /* line 120, sass/style.sass */
 .thumbnail-box {
-  height: 100px;
   padding: 0;
   border: 1px solid #282828;
 }
-/* line 124, sass/style.sass */
+/* line 123, sass/style.sass */
 .thumbnail-box img {
   height: 100%;
   width: 100%;
