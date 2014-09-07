@@ -1,75 +1,107 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Sue Philbin Photoart</title>
-    <link rel="stylesheet" href="static/fonts/gtfse-icons/gtfse-icons-style.css" />
-    <link rel="stylesheet" href="static/fonts/Open-Sans/stylesheet.css"/>
-    <link rel="stylesheet" href="lib/bootstrap-3.2.0/css/bootstrap.css"/>
-    <link rel="stylesheet" href="style.css"/>
-    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
-    <script src="lib/bootstrap-3.2.0/js/bootstrap.js" type="text/javascript"></script>
-    <script type="text/javascript" src="lib/jssor/js/jssor.core.js"></script>
-    <script type="text/javascript" src="lib/jssor/js/jssor.utils.js"></script>
-    <script type="text/javascript" src="lib/jssor/js/jssor.slider.js"></script>
-    <script type="text/javascript" src="js/full_width_slider.js"></script>
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" ng-app="sue-philbin-photoart">
+    <head>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Sue Philbin Photoart</title>
+        <link rel="stylesheet" href="static/fonts/Open-Sans/stylesheet.css"/>
+        <link rel="stylesheet" href="lib/bootstrap-3.2.0/css/bootstrap.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+        <script src="lib/bootstrap-3.2.0/js/bootstrap.js" type="text/javascript"></script>
+        <script src="lib/angular_js/angular.min.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+    </head>
 
-<body>
-    <div class="container wide">
-        <div class="row wide">
-            <div class="col-md-4" style="border:1px solid blue; height: 100px">
-            </div>
-            <div class="col-md-4" style="border:1px solid blue; height: 100px">
-            </div>
-            <div class="col-md-4" style="border:1px solid blue; height: 100px">
-            </div>
-        </div>
-    </div>
-
-    <div class="container wide">
-        <div class="row wide">
-            <div class="col-xs-12 wide" style="padding-top:20px">
-                <!-- Stupid Son of a Bitch Slider Begings -->
-                <!-- Stupid Son of a Bitch Slider Begings -->
-                <!-- Stupid Son of a Bitch Slider Begings -->
-                <div id="slider" style="position: relative; margin: 0 auto;top: 0px; left: 0px; width: 2000px; height: 500px; overflow: hidden;">
-                    <!-- Slides Container -->
-                    <div u="slides" style="cursor: pointer; width: 2000px; height: 500px; overflow: hidden;">
-                        <div>
-                            <img u="image" src="static/images/img1.jpg" />
-                        </div>
-                        <div>
-                            <img u="image" src="static/images/img2.jpg" />
-                        </div>
-                        <div>
-                            <img u="image" src="static/images/img3.jpg" />
-                        </div>
+    <body>
+        <div class="container wide banner-1">
+            <div class="row wide">
+                <div class="col-md-4">
+                    <div class="page-title">
+                        <h1>Sue Philbin Photoart</h1>
                     </div>
-                    <!-- Bullet Navigator Skin Begin -->
-                    <!-- bullet navigator container -->
-                    <div u="navigator" class="slider-bullet" style="position: absolute; bottom: 26px; left: 6px;">
-                        <!-- bullet navigator item prototype -->
-                        <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
-                    </div>
-
-                    <!-- Arrow Left -->
-                    <span u="arrowleft" class="jssora21l">
-                    </span>
-                    <!-- Arrow Right -->
-                    <span u="arrowright" class="jssora21r">
-                    </span>
-                    <!-- Arrow Navigator Skin End -->
                 </div>
-                <!-- Stupid Son of a Bitch Slider Ends.. Thank fuck.. -->
-                <!-- Stupid Son of a Bitch Slider Ends.. Thank fuck.. -->
-                <!-- Stupid Son of a Bitch Slider Ends.. Thank fuck.. -->
             </div>
         </div>
-    </div>
-</body>
+
+        <div class="container wide" ng-controller="InfoController as info">
+            <div class="row wide">
+                <div class="col-md-4 col-md-offset-4">
+                    <nav class="navbar navbar-default custom-navbar" role="navigation">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/index.html"><span class="glyphicon glyphicon-home"></span></a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li ng-class="{ custom-active: info.isSelected("aboutSue") }">
+                                    <a ng-click="info.selectInfo("aboutSue")" href>
+                                        About Sue
+                                    </a>
+                                </li>
+                                <li ng-class="{ custom-active: info.isSelected("littleBooks") }">
+                                    <a ng-click="info.selectInfo("littleBooks")" href>
+                                        Little Books
+                                    </a>
+                                </li>
+                                <li ng-class="{ custom-active: info.isSelected("calenders") }">
+                                    <a ng-click="info.selectInfo("calenders")" href>
+                                        Calenders
+                                    </a>
+                                </li>
+                                <li ng-class="{ custom-active: info.isSelected("weddings") }">
+                                    <a ng-click="info.selectInfo("weddings")" href>
+                                        Weddings
+                                    </a>
+                                </li>
+                                <li ng-class="{ custom-active: info.isSelected("contact") }">
+                                    <a ng-click="info.selectInfo("contact")" href>
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="row wide">
+                <div class="col-md-4 col-md-offset-3">
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+
+        <div class="container wide">
+            <div class="row wide">
+                <div class="col-xs-12">
+                </div>
+                <div class="col-md-2 col-md-offset-3">
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+        <div class="container wide">
+            <div class="row wide">
+                <div class="col-md-3 col-md-offset-3">
+                </div>
+                <div class="col-md-3">
+                <div>
+            </div>
+        </div>
+    </body>
+</html>

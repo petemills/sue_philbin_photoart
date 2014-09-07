@@ -1,104 +1,93 @@
-/* line 5, sass/style.sass */
+/* line 30, sass/style.sass */
 html {
   width: 100%;
   height: 100%;
 }
 
-/* line 9, sass/style.sass */
+/* line 34, sass/style.sass */
 body {
   width: 100%;
   height: 100%;
+  font-family: "open_sanslight", sans-serif;
 }
 
-/* line 13, sass/style.sass */
+/* line 39, sass/style.sass */
+.centered {
+  text-align: center;
+}
+
+/* line 42, sass/style.sass */
+.light {
+  color: gainsboro;
+  height: 200px;
+}
+
+/* line 46, sass/style.sass */
+.dark {
+  color: #464646;
+}
+
+/* line 49, sass/style.sass */
+.med {
+  color: #969696;
+}
+
+/* line 52, sass/style.sass */
 .wide {
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-/* line 17, sass/style.sass */
-.slider-bullet {
-  position: absolute;
-  bottom: 26px;
-  left: 6px;
-}
-/* line 21, sass/style.sass */
-.slider-bullet div {
-  background: url(static/images/b21.png) no-repeat;
-  overflow: hidden;
-  cursor: pointer;
-  background-position: -5px -5px;
-}
-/* line 26, sass/style.sass */
-.slider-bullet div:hover {
-  background-position: -35px -5px;
-}
-/* line 28, sass/style.sass */
-.slider-bullet .av {
-  background-position: -65px -5px;
-}
-/* line 30, sass/style.sass */
-.slider-bullet .av:hover {
-  background-position: -35px -5px;
-}
-/* line 32, sass/style.sass */
-.slider-bullet .dn {
-  background-position: -95px -5px;
+/* line 56, sass/style.sass */
+.no-padding-margin {
+  padding: 0;
+  margin: 0;
 }
 
-/* line 36, sass/style.sass */
-.jssora21l {
-  width: 55px;
-  height: 55px;
-  top: 123px;
-  left: 8px;
-  position: absolute;
-  cursor: pointer;
-  display: block;
-  background: url(static/images/a21.png) center center no-repeat;
-  overflow: hidden;
-  background-position: -3px -33px;
+/* line 59, sass/style.sass */
+.custom-navbar {
+  border-radius: 0;
+  background-color: #464646;
 }
-/* line 47, sass/style.sass */
-.jssora21l:hover {
-  background-position: -123px -33px;
-}
-
-/* line 50, sass/style.sass */
-.jssora21ldn {
-  position: absolute;
-  cursor: pointer;
-  display: block;
-  background: url(static/images/a21.png) center center no-repeat;
-  overflow: hidden;
-  background-position: -243px -33px;
-}
-
-/* line 58, sass/style.sass */
-.jssora21r {
-  width: 55px;
-  height: 55px;
-  top: 123px;
-  right: 8px;
-  position: absolute;
-  cursor: pointer;
-  display: block;
-  background: url(static/images/a21.png) center center no-repeat;
-  overflow: hidden;
-  background-position: -63px -33px;
+/* line 67, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li.custom-active {
+  background-color: orange;
 }
 /* line 69, sass/style.sass */
-.jssora21r:hover {
-  background-position: -183px -33px;
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a {
+  color: white;
+}
+/* line 71, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a:hover {
+  color: black;
+}
+/* line 74, sass/style.sass */
+.custom-navbar .navbar-header a {
+  color: white;
+}
+/* line 76, sass/style.sass */
+.custom-navbar .navbar-header a:hover {
+  color: black;
 }
 
-/* line 72, sass/style.sass */
-.jssora21rdn {
-  position: absolute;
-  cursor: pointer;
-  display: block;
-  background: url(static/images/a21.png) center center no-repeat;
-  overflow: hidden;
-  background-position: -303px -33px;
+/* line 79, sass/style.sass */
+.banner-1 {
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
+  background-attachment: fixed, fixed;
+}
+/* line 81, sass/style.sass */
+.banner-1 .page-title {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+}
+/* line 85, sass/style.sass */
+.banner-1 .page-title h1 {
+  font-family: "open_sansbold", sans-serif;
+  color: gainsboro;
 }

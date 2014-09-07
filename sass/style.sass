@@ -1,6 +1,31 @@
+$banner-1-img: url('static/images/camera2.jpg')
+$light-col: rgb(220,220,220)
+$lighter-col: rgb(250,250,250)
+$medium-col: rgb(150,150,150)
+$dark-col: rgb(70,70,70)
+$darker-col: rgb(40,40,40)
+$blue-col: rgba(31, 119, 180, 0.85)
+
 @mixin no-padding-margin
 	padding : 0
 	margin: 0
+
+@mixin site-font-light
+	font-family: "open_sanslight", sans-serif 
+
+@mixin site-font-reg
+	font-family: "open_sansregular", sans-serif 
+
+@mixin site-font-bold
+	font-family: "open_sansbold", sans-serif 
+
+@mixin banner-1-background
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0.7) 100%), $banner-1-img
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0.7) 100%), $banner-1-img
+	background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0.7) 100%), $banner-1-img
+	background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0.7) 100%), $banner-1-img
+	background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0.7) 100%), $banner-1-img
+	background-attachment: fixed, fixed
 
 html
 	width: 100%
@@ -9,73 +34,54 @@ html
 body
 	width: 100%
 	height: 100%
+	@include site-font-light
+
+.centered
+	text-align: center
+
+.light
+	color: $light-col
+	height: 200px
+
+.dark
+	color: $dark-col
+
+.med
+	color: $medium-col
 
 .wide
 	width: 100%
 	@include no-padding-margin
 
-.slider-bullet
-	position: absolute
-	bottom: 26px
-	left: 6px
-	div
-		background: url(static/images/b21.png) no-repeat
-		overflow: hidden
-		cursor: pointer
-		background-position: -5px -5px
-		&:hover
-			background-position: -35px -5px
-	.av
-		background-position: -65px -5px
-		&:hover
-			background-position: -35px -5px
-	.dn
-		background-position: -95px -5px
+.no-padding-margin
+	@include no-padding-margin
 
-// SLIDER STUFF ///////////////////////////////////////////////////////////
-.jssora21l
-	width: 55px
-	height: 55px
-	top: 123px
-	left: 8px
-	position: absolute
-	cursor: pointer
-	display: block
-	background: url(static/images/a21.png) center center no-repeat
-	overflow: hidden
-	background-position: -3px -33px
-	&:hover
-		background-position: -123px -33px
+.custom-navbar
+	border-radius: 0
+	background-color: $dark-col
+	.collapse
+		&.navbar-collapse
+			.nav
+				&.navbar-nav
+					li
+						&.custom-active
+							background-color: orange
+						a
+							color: white
+							&:hover
+								color: black
+	.navbar-header
+		a
+			color: white
+			&:hover
+				color: black
 
-.jssora21ldn
-	position: absolute
-	cursor: pointer
-	display: block
-	background: url(static/images/a21.png) center center no-repeat
-	overflow: hidden
-	background-position: -243px -33px
-
-.jssora21r
-	width: 55px
-	height: 55px
-	top: 123px
-	right: 8px
-	position: absolute
-	cursor: pointer
-	display: block
-	background: url(static/images/a21.png) center center no-repeat
-	overflow: hidden
-	background-position: -63px -33px
-	&:hover
-		background-position: -183px -33px
-
-.jssora21rdn
-	position: absolute
-	cursor: pointer
-	display: block
-	background: url(static/images/a21.png) center center no-repeat
-	overflow: hidden
-	background-position: -303px -33px
-
-///////////////////////////////////////////////////////////////////////////
-
+.banner-1
+	@include banner-1-background
+	.page-title
+		padding-top: 200px
+		padding-bottom: 200px
+		padding-left: 50px
+		h1
+			@include site-font-bold
+			color: $light-col
