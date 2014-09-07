@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="container wide" ng-controller="InfoController as info">
+        <div class="container wide" ng-controller="InfoController as info" ng-init="info.currentInfo=1">
             <div class="row wide">
                 <div class="col-md-4 col-md-offset-4">
                     <nav class="navbar navbar-default custom-navbar" role="navigation">
@@ -45,35 +45,36 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
-                                <li ng-class="{ custom-active: info.isSelected("aboutSue") }">
-                                    <a ng-click="info.selectInfo("aboutSue")" href>
+                                <li ng-class="{ custom-active:info.isSelected(1) }">
+                                    <a href ng-click="info.selectInfo(1)">
                                         About Sue
                                     </a>
                                 </li>
-                                <li ng-class="{ custom-active: info.isSelected("littleBooks") }">
-                                    <a ng-click="info.selectInfo("littleBooks")" href>
+                                <li ng-class="{ custom-active:info.isSelected(2) }">
+                                    <a href ng-click="info.selectInfo(2)">
                                         Little Books
                                     </a>
                                 </li>
-                                <li ng-class="{ custom-active: info.isSelected("calenders") }">
-                                    <a ng-click="info.selectInfo("calenders")" href>
+                                <li ng-class="{ custom-active:info.isSelected(3) }">
+                                    <a href ng-click="info.selectInfo(3)">
                                         Calenders
                                     </a>
                                 </li>
-                                <li ng-class="{ custom-active: info.isSelected("weddings") }">
-                                    <a ng-click="info.selectInfo("weddings")" href>
+                                <li ng-class="{ custom-active:info.isSelected(4) }">
+                                    <a href ng-click="info.selectInfo(4)">
                                         Weddings
                                     </a>
                                 </li>
-                                <li ng-class="{ custom-active: info.isSelected("contact") }">
-                                    <a ng-click="info.selectInfo("contact")" href>
+                                <li ng-class="{ custom-active:info.isSelected(5) }">
+                                    <a href ng-click="info.selectInfo(5)">
                                         Contact
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </nav>
-
+                    {{info.currentInfo}}
+                    {{info.isSelected(1)}}
                 </div>
             </div>
             <div class="row wide">
