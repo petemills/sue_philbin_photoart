@@ -28,9 +28,9 @@
             </div>
         </div>
 
-        <div class="container wide" ng-controller="InfoController as info" ng-init="info.currentInfo='aboutSue'">
+        <div class="container wide banner-2" ng-controller="InfoController as info" ng-init="info.currentInfo='aboutSue'">
             <div class="row wide">
-                <div class="col-md-4 col-md-offset-4">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
                     <nav class="navbar navbar-default custom-navbar" role="navigation">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -40,7 +40,6 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="/index.html"><span class="glyphicon glyphicon-home"></span></a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse">
@@ -73,35 +72,118 @@
                             </ul>
                         </div>
                     </nav>
-                    {{info.currentInfo}}
-                    {{info.isSelected('aboutSue')}}
                 </div>
             </div>
             <div class="row wide">
-                <div class="col-md-4 col-md-offset-3">
+
+                <!-- INFO BLOCK 1 -->
+                <div class="col-md-4 col-md-offset-3" ng-show="info.isSelected('aboutSue')">
+                    <p>
+                        Sue is a photographer living and working in New Zealand. She lives with her family in the Waikato region, located in the Central North Island. She specialises in capturing images that depict the beauty of the various environments in which we live.
+                    </p>
+                    <p>
+                        Sue’s card and calendar collections have been designed to appeal to the people who live and work in the Waikato as well as visitors passing through. Although her style suits any environment and she is always eager to explore new areas and new opportunities.
+                    </p>
+                    <p>
+                        All of her images can be made into cards, calendars or art-prints. Please contact her for further information.
+                    <p>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 info-img" ng-show="info.isSelected('aboutSue')">
                 </div>
+
+                <!-- INFO BLOCK 2 -->
+                <div class="col-md-4 col-md-offset-3" ng-show="info.isSelected('littleBooks')">
+                    <p>
+                        Sue has created a number of 'little books' each designed to showcase a specific region or area in New Zealand. Sue's little books are beautifully constructed and comprise of images specially selected by Sue to best depict the heart, soul and individuality of the book's region of focus.
+                    <p>
+                </div>
+                <div class="col-md-2 info-img" ng-show="info.isSelected('littleBooks')">
+                </div>
+
+                <!-- INFO BLOCK 3 -->
+
+                <!-- INFO BLOCK 4 -->
+
+                <!-- INFO BLOCK 5 -->
             </div>
         </div>
 
-        <div class="container wide">
+        <div class="container wide banner-3">
             <div class="row wide">
                 <div class="col-xs-12">
+                    <h1 class="light centered">
+                        Gallery
+                    </h1>
                 </div>
-                <div class="col-md-2 col-md-offset-3">
+            </div>
+            <div class="row wide">
+                <div class="col-lg-2 col-lg-offset-3 col-md-4 col-md-offset-1 thumbnail-container">
+                    <div class="row">
+                        <div class="col-sm-6 thumbnail-box">
+                            <a href>
+                                <img class="img-responsive" src="static/images/bird.jpg"></img>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                        <div class="col-sm-6 thumbnail-box">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6 col-sm-6 gallery">
+                    <img class="img-responsive" src="static/images/bird.jpg"></img>
                 </div>
             </div>
         </div>
 
-        <div class="container wide">
-            <div class="row wide">
-                <div class="col-md-3 col-md-offset-3">
+        <div class="container wide footer-1">
+            <div class="row">
+                 <div class="col-md-4 col-md-offset-4 centered">
+                    <h4 class="light">
+                        Contact
+                    </h4>
+                    <p class="light">
+                        9 Blue Heron Place, <br>
+                        Hamilton, RD3 <br>
+                        Email: suephilbin@email.com
+                    </p>
+                    <span class="glyphicon glyphicon-earphone light"> (44)220847971</span> <br>
                 </div>
-                <div class="col-md-3">
-                <div>
+            </div>
+        </div>
+
+        <div class="container wide footer-2">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 centered">
+                    <p class="light">
+                        Copyright <span class="glyphicon glyphicon-copyright-mark"></span> Sue Philbin Photoart 2014
+                    </p>
+                    <p class="light">
+                        Designed by Peter Mills
+                    </p>
+                </div>
             </div>
         </div>
     </body>

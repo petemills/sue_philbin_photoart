@@ -19,59 +19,58 @@ body {
 /* line 42, sass/style.sass */
 .light {
   color: gainsboro;
-  height: 200px;
 }
 
-/* line 46, sass/style.sass */
+/* line 45, sass/style.sass */
 .dark {
   color: #464646;
 }
 
-/* line 49, sass/style.sass */
+/* line 48, sass/style.sass */
 .med {
   color: #969696;
 }
 
-/* line 52, sass/style.sass */
+/* line 51, sass/style.sass */
 .wide {
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-/* line 56, sass/style.sass */
+/* line 55, sass/style.sass */
 .no-padding-margin {
   padding: 0;
   margin: 0;
 }
 
-/* line 59, sass/style.sass */
+/* line 58, sass/style.sass */
 .custom-navbar {
   border-radius: 0;
   background-color: #464646;
 }
-/* line 67, sass/style.sass */
+/* line 66, sass/style.sass */
 .custom-navbar .collapse.navbar-collapse .nav.navbar-nav li.custom-active {
   background-color: orange;
 }
-/* line 69, sass/style.sass */
+/* line 68, sass/style.sass */
 .custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a {
   color: white;
 }
-/* line 71, sass/style.sass */
+/* line 70, sass/style.sass */
 .custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a:hover {
   color: black;
 }
-/* line 74, sass/style.sass */
+/* line 73, sass/style.sass */
 .custom-navbar .navbar-header a {
   color: white;
 }
-/* line 76, sass/style.sass */
+/* line 75, sass/style.sass */
 .custom-navbar .navbar-header a:hover {
   color: black;
 }
 
-/* line 79, sass/style.sass */
+/* line 78, sass/style.sass */
 .banner-1 {
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
@@ -80,14 +79,76 @@ body {
   background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 100%), url("static/images/camera2.jpg");
   background-attachment: fixed, fixed;
 }
-/* line 81, sass/style.sass */
+/* line 80, sass/style.sass */
 .banner-1 .page-title {
   padding-top: 200px;
   padding-bottom: 200px;
   padding-left: 50px;
 }
-/* line 85, sass/style.sass */
+/* line 84, sass/style.sass */
 .banner-1 .page-title h1 {
   font-family: "open_sansbold", sans-serif;
   color: gainsboro;
+}
+
+/* line 88, sass/style.sass */
+.banner-2 {
+  background-color: white;
+  padding-bottom: 20px;
+}
+/* line 91, sass/style.sass */
+.banner-2 .info-img {
+  background-color: #969696;
+  padding-bottom: 200px;
+}
+
+/* line 95, sass/style.sass */
+.banner-3 {
+  background-color: #282828;
+  padding-bottom: 50px;
+}
+/* line 98, sass/style.sass */
+.banner-3 .thumbnail-container {
+  background-color: #969696;
+}
+/* line 100, sass/style.sass */
+.banner-3 .gallery {
+  background-color: #464646;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+/* line 105, sass/style.sass */
+.footer-1 {
+  background-color: #464646;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 110, sass/style.sass */
+.footer-2 {
+  background-color: #464646;
+  padding-bottom: 10px;
+}
+/* line 113, sass/style.sass */
+.footer-2 .col-md-4 {
+  border-top: 3px solid #969696;
+  padding-top: 10px;
+}
+
+/* line 117, sass/style.sass */
+.b {
+  border: 1px solid blue;
+}
+
+/* line 120, sass/style.sass */
+.thumbnail-box {
+  height: 100px;
+  padding: 0;
+  border: 1px solid #282828;
+}
+/* line 124, sass/style.sass */
+.thumbnail-box img {
+  height: 100%;
+  width: 100%;
 }
