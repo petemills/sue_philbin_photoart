@@ -84,19 +84,16 @@ body
 					float: none
 					li
 						a
+							outline: 0
 							color: white
 							&:hover
 								color: $orange-col
 						&.custom-active
 							background-color: $orange-col
 							a
+								outline: 0
 								&:hover
 									color: white
-	.navbar-header
-		a
-			color: white
-			&:hover
-				color: black
 
 .banner-1
 	@include banner-1-background
@@ -106,18 +103,33 @@ body
 			padding-top: 200px
 			padding-bottom: 200px
 			padding-left: 50px
+	.tag-line-background
+		padding-top: 200px
+		.tag-line
+			p
+				font-size: 50px
+		hr
+			border-width: 4px
+			border-color: $orange-col
+			width: 100%
+
 
 .banner-2
-	background-color: white
+	background-color: $orange-col
+	color: white
 	padding-bottom: 30px
+	p
+		font-size: 22px
 
 .banner-3
 	@include banner-3-background
 	padding-bottom: 50px
 	border-bottom: 3px solid $orange-col
-	border-top: 3px solid $orange-col
+	border-top: 3px solid $dark-col
 	.thumbnail-container
 		background-color: $darker-col
+		a
+			outline: 0
 		.image-active
 			border: 3px solid $orange-col
 	.gallery
