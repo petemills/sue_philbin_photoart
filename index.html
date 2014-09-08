@@ -14,15 +14,16 @@
         <script src="lib/jquery/jquery-2.1.1.min.js"></script>
         <script src="lib/bootstrap-3.2.0/js/bootstrap.js" type="text/javascript"></script>
         <script src="lib/angular_js/angular.min.js" type="text/javascript"></script>
+        <script src="lib/angular_js/angular-animate.min.js" type="text/javascript"></script>
         <script src="js/app.js" type="text/javascript"></script>
     </head>
 
     <body>
         <div class="container wide banner-1">
             <div class="row wide">
-                <div class="col-md-4">
+                <div class="col-md-4 page-title-background">
                     <div class="page-title">
-                        <h1>Sue Philbin Photoart</h1>
+                        <img class="img-responsive" src="static/images/logo.png"></img>
                     </div>
                 </div>
             </div>
@@ -30,7 +31,7 @@
 
         <div class="container wide banner-2" ng-controller="InfoController as info" ng-init="info.currentInfo='aboutSue'">
             <div class="row wide">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+                <div class="col-xs-12 wide">
                     <nav class="navbar navbar-default custom-navbar" role="navigation">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -75,9 +76,11 @@
                 </div>
             </div>
             <div class="row wide">
-
                 <!-- INFO BLOCK 1 -->
-                <div class="col-md-4 col-md-offset-3" ng-show="info.isSelected('aboutSue')">
+                <div class="col-md-4 col-sm-4 show-animation centered info-title" ng-show="info.isSelected('aboutSue')">
+                    <h1 class="reg">ABOUT SUE</h1>
+                </div>
+                <div class="col-md-4 col-sm-5 show-animation info-block" ng-show="info.isSelected('aboutSue')">
                     <p>
                         Sue is a photographer living and working in New Zealand. She lives with her family in the Waikato region, located in the Central North Island. She specialises in capturing images that depict the beauty of the various environments in which we live.
                     </p>
@@ -88,105 +91,180 @@
                         All of her images can be made into cards, calendars or art-prints. Please contact her for further information.
                     <p>
                 </div>
-                <div class="col-md-2 info-img" ng-show="info.isSelected('aboutSue')">
-                </div>
 
                 <!-- INFO BLOCK 2 -->
-                <div class="col-md-4 col-md-offset-3" ng-show="info.isSelected('littleBooks')">
+                <div class="col-md-4 col-sm-4 show-animation centered info-title" ng-show="info.isSelected('littleBooks')">
+                    <h1 class="reg">STUNNING LITTLE BOOKS</h1>
+                </div>
+                <div class="col-md-4 col-sm-5 show-animation" ng-show="info.isSelected('littleBooks')">
                     <p>
                         Sue has created a number of 'little books' each designed to showcase a specific region or area in New Zealand. Sue's little books are beautifully constructed and comprise of images specially selected by Sue to best depict the heart, soul and individuality of the book's region of focus.
                     <p>
                 </div>
-                <div class="col-md-2 info-img" ng-show="info.isSelected('littleBooks')">
-                </div>
 
                 <!-- INFO BLOCK 3 -->
+                <div class="col-md-4 col-sm-4 show-animation centered info-title" ng-show="info.isSelected('calenders')">
+                    <h1 class="reg">BEAUTIFUL CALENDERS</h1>
+                </div>
+                <div class="col-md-4 col-sm-5 show-animation" ng-show="info.isSelected('calenders')">
+                    <p>
+                        Sue has created a number of 'little books' each designed to showcase a specific region or area in New Zealand. Sue's little books are beautifully constructed and comprise of images specially selected by Sue to best depict the heart, soul and individuality of the book's region of focus.
+                    <p>
+                </div>
 
                 <!-- INFO BLOCK 4 -->
-
+                <div class="col-md-4 col-sm-4 show-animation centered info-title" ng-show="info.isSelected('weddings')">
+                    <h1 class="reg">HIRE SUE FOR WEDDINGS</h1>
+                </div>
+                <div class="col-md-4 col-sm-5 show-animation" ng-show="info.isSelected('weddings')">
+                    <p>
+                        Sue has created a number of 'little books' each designed to showcase a specific region or area in New Zealand. Sue's little books are beautifully constructed and comprise of images specially selected by Sue to best depict the heart, soul and individuality of the book's region of focus.
+                    <p>
+                </div>
                 <!-- INFO BLOCK 5 -->
+                <div class="col-md-4 col-sm-4 show-animation centered info-title" ng-show="info.isSelected('contact')">
+                    <h1 class="reg">CONTACT SUE</h1>
+                </div>
+                <div class="col-md-4 col-sm-5 show-animation" ng-show="info.isSelected('contact')">
+                    <p>
+                        Sue has created a number of 'little books' each designed to showcase a specific region or area in New Zealand. Sue's little books are beautifully constructed and comprise of images specially selected by Sue to best depict the heart, soul and individuality of the book's region of focus.
+                    <p>
+                </div>
             </div>
         </div>
 
-        <div class="container wide banner-3">
+        <div class="container wide banner-3" ng-controller="GalleryController as gallery" ng-init="gallery.currentImage=1">
             <div class="row wide">
                 <div class="col-xs-12">
                     <h1 class="light centered">
-                        Gallery
+                        Sample Gallery
                     </h1>
                 </div>
             </div>
-            <div class="row wide">
-                <div class="col-lg-2 col-lg-offset-3 col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 thumbnail-container">
+            <div class="row wide" style="padding-top: 20px">
+                <div class="col-lg-2 col-lg-offset-3 col-sm-4 col-sm-offset-1 col-xs-12 thumbnail-container">
                     <div class="row">
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/bird2.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(1) }">
+                            <a href ng-click="gallery.selectImage(1)">
+                                <img class="img-responsive" src="static/images/thumbnails/beach1_thumb.jpg"></img>
                             </a>
                         </div>
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/bird.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(2) }">
+                            <a href ng-click="gallery.selectImage(2)">
+                                <img class="img-responsive" src="static/images/thumbnails/beach2_thumb.jpg"></img>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(3) }">
+                            <a href ng-click="gallery.selectImage(3)">
+                                <img class="img-responsive" src="static/images/thumbnails/red_flower1_thumb.jpg"></img>
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/mountains1.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(4) }">
+                            <a href ng-click="gallery.selectImage(4)">
+                                <img class="img-responsive" src="static/images/thumbnails/mist1_thumb.jpg"></img>
                             </a>
                         </div>
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/mist1.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(5) }">
+                            <a href ng-click="gallery.selectImage(5)">
+                                <img class="img-responsive" src="static/images/thumbnails/white_flower1_thumb.jpg"></img>
                             </a>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/mountains2.jpg"></img>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/poppies.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(6) }">
+                            <a href ng-click="gallery.selectImage(6)">
+                                <img class="img-responsive" src="static/images/thumbnails/sea1_thumb.jpg"></img>
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/pylons1.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(7) }">
+                            <a href ng-click="gallery.selectImage(7)">
+                                <img class="img-responsive" src="static/images/thumbnails/sea2_thumb.jpg"></img>
                             </a>
                         </div>
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/sea1.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(8) }">
+                            <a href ng-click="gallery.selectImage(8)">
+                                <img class="img-responsive" src="static/images/thumbnails/pylons1_thumb.jpg"></img>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(9) }">
+                            <a href ng-click="gallery.selectImage(9)">
+                                <img class="img-responsive" src="static/images/thumbnails/mountains2_thumb.jpg"></img>
                             </a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/red_flower.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(10) }">
+                            <a href ng-click="gallery.selectImage(10)">
+                                <img class="img-responsive" src="static/images/thumbnails/green_plant1_thumb.jpg"></img>
                             </a>
                         </div>
-                        <div class="col-sm-6 thumbnail-box">
-                            <a href>
-                                <img class="img-responsive" src="static/images/pylons2.jpg"></img>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(11) }">
+                            <a href ng-click="gallery.selectImage(11)">
+                                <img class="img-responsive" src="static/images/thumbnails/corromandel1_thumb.jpg"></img>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 thumbnail-box" ng-class="{ 'image-active': gallery.isSelected(12) }">
+                            <a href ng-click="gallery.selectImage(12)">
+                                <img class="img-responsive" src="static/images/thumbnails/poppies1_thumb.jpg"></img>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs gallery">
-                    <img class="img-responsive" src="static/images/bird2.jpg"></img>
+                <!-- Image 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(1)">
+                    <img class="img-responsive" src="static/images/beach1.jpg"></img>
+                </div>
+                <!-- Image 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(2)">
+                    <img class="img-responsive" src="static/images/beach2.jpg"></img>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(3)">
+                    <img class="img-responsive" src="static/images/red_flower1.jpg"></img>
+                </div>
+                <!-- Image 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(4)">
+                    <img class="img-responsive" src="static/images/mist1.jpg"></img>
+                </div>
+                <!-- Image 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(5)">
+                    <img class="img-responsive" src="static/images/white_flower1.jpg"></img>
+                </div>
+                <!-- Image 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(6)">
+                    <img class="img-responsive" src="static/images/sea1.jpg"></img>
+                </div>
+                <!-- Image 7 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(7)">
+                    <img class="img-responsive" src="static/images/sea2.jpg"></img>
+                </div>
+                <!-- Image 8 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(8)">
+                    <img class="img-responsive" src="static/images/pylons1.jpg"></img>
+                </div>
+                <!-- Image 9 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(9)">
+                    <img class="img-responsive" src="static/images/mountains2.jpg"></img>
+                </div>
+                <!-- Image 10 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(10)">
+                    <img class="img-responsive" src="static/images/green_plant1.jpg"></img>
+                </div>
+                <!-- Image 11 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(11)">
+                    <img class="img-responsive" src="static/images/corromandel1.jpg"></img>
+                </div>
+                <!-- Image 12 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 gallery show-animation" ng-show="gallery.isSelected(12)">
+                    <img class="img-responsive" src="static/images/poppies1.jpg"></img>
                 </div>
             </div>
         </div>
 
         <div class="container wide footer-1">
-            <div class="row">
+            <div class="row wide">
                  <div class="col-md-4 col-md-offset-4 centered">
                     <h4 class="light">
                         Contact
@@ -202,7 +280,7 @@
         </div>
 
         <div class="container wide footer-2">
-            <div class="row">
+            <div class="row wide">
                 <div class="col-md-4 col-md-offset-4 centered">
                     <p class="light">
                         Copyright <span class="glyphicon glyphicon-copyright-mark"></span> Sue Philbin Photoart 2014

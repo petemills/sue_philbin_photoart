@@ -1,112 +1,195 @@
+/* line 40, sass/style.sass */
 html {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
-  body {
-    width: 100%;
-    height: 100%;
-    font-family: "open_sanslight", sans-serif; }
+/* line 44, sass/style.sass */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "open_sanslight", sans-serif;
+}
 
-    .centered {
-      text-align: center; }
+/* line 49, sass/style.sass */
+.reg {
+  font-family: "open_sansregular", sans-serif;
+}
 
-      .light {
-        color: gainsboro; }
+/* line 52, sass/style.sass */
+.bold {
+  font-family: "open_sansbold", sans-serif;
+}
 
-        .dark {
-          color: #464646; }
+/* line 55, sass/style.sass */
+.centered {
+  text-align: center;
+}
 
-          .med {
-            color: #969696; }
+/* line 58, sass/style.sass */
+.light {
+  color: gainsboro;
+}
 
-            .wide {
-              width: 100%;
-              padding: 0;
-              margin: 0; }
+/* line 61, sass/style.sass */
+.dark {
+  color: #464646;
+}
 
-              .no-padding-margin {
-                padding: 0;
-                margin: 0; }
+/* line 64, sass/style.sass */
+.med {
+  color: #969696;
+}
 
-                .custom-navbar {
-                  border-radius: 0;
-                  background-color: #464646; }
-                  .custom-navbar .collapse.navbar-collapse .nav.navbar-nav li.custom-active {
-                    background-color: orange; }
-                    .custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a {
-                      color: white; }
-                      .custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a:hover {
-                        color: black; }
-                  .custom-navbar .navbar-header a {
-                    color: white; }
-                    .custom-navbar .navbar-header a:hover {
-                      color: black; }
+/* line 67, sass/style.sass */
+.wide {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
+/* line 71, sass/style.sass */
+.no-padding-margin {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 74, sass/style.sass */
+.custom-navbar {
+  border-radius: 0;
+  border: none;
+  background-color: #464646;
+}
+/* line 79, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse {
+  text-align: center;
+}
+/* line 82, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav {
+  display: inline-block;
+  float: none;
+}
+/* line 86, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a {
+  color: white;
+}
+/* line 88, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li a:hover {
+  color: #ff9500;
+}
+/* line 90, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li.custom-active {
+  background-color: #ff9500;
+}
+/* line 93, sass/style.sass */
+.custom-navbar .collapse.navbar-collapse .nav.navbar-nav li.custom-active a:hover {
+  color: white;
+}
+/* line 96, sass/style.sass */
+.custom-navbar .navbar-header a {
+  color: white;
+}
+/* line 98, sass/style.sass */
+.custom-navbar .navbar-header a:hover {
+  color: black;
+}
+
+/* line 101, sass/style.sass */
 .banner-1 {
-  background: -moz-linear-gradient(left, transparent 5%, rgba(0, 0, 0, 0.7) 100%),
-    url('../static/images/camera2.jpg');
-  background: -webkit-linear-gradient(left, transparent 5%, rgba(0, 0, 0, 0.7) 100%),
-    url('../static/images/camera2.jpg');
-  background: -o-linear-gradient(left, transparent 5%, rgba(0, 0, 0, 0.7) 100%),
-    url('../static/images/camera2.jpg');
-  background: -ms-linear-gradient(left, transparent 5%, rgba(0, 0, 0, 0.7) 100%),
-    url('../static/images/camera2.jpg');
-  background: linear-gradient(to left, transparent 5%, rgba(0, 0, 0, 0.7)),
-    url('../static/images/camera2.jpg');
-  background-attachment: fixed, fixed; }
-  .banner-1 .page-title {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    padding-left: 50px; }
-    .banner-1 .page-title h1 {
-      font-family: "open_sansbold", sans-serif;
-      color: gainsboro; }
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera1.jpg");
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera1.jpg");
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera1.jpg");
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera1.jpg");
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera1.jpg");
+  background-attachment: fixed, fixed;
+}
+/* line 103, sass/style.sass */
+.banner-1 .page-title-background {
+  background-color: #ff9500;
+}
+/* line 105, sass/style.sass */
+.banner-1 .page-title-background .page-title {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 50px;
+}
 
+/* line 110, sass/style.sass */
 .banner-2 {
   background-color: white;
-  padding-bottom: 20px; }
-  .banner-2 .info-img {
-    background-color: #969696;
-    padding-bottom: 200px; }
+  padding-bottom: 30px;
+}
 
+/* line 114, sass/style.sass */
 .banner-3 {
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%),
-    url('../static/images/camera3.jpg');
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 0%),
-    url('../static/images/camera3.jpg');
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%),
-    url('../static/images/camera3.jpg');
-  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%),
-    url('../static/images/camera3.jpg');
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) 0%),
-    url('../static/images/camera3.jpg');
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera2.jpg");
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera2.jpg");
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera2.jpg");
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera2.jpg");
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 0%), url("../static/images/camera2.jpg");
   background-attachment: fixed, fixed;
-  padding-bottom: 50px; }
-  .banner-3 .thumbnail-container {
-    background-color: #282828; }
-    .banner-3 .gallery {
-      background-color: #464646;
-      padding-bottom: 15px;
-      padding-top: 15px; }
+  padding-bottom: 50px;
+  border-bottom: 3px solid #ff9500;
+  border-top: 3px solid #ff9500;
+}
+/* line 119, sass/style.sass */
+.banner-3 .thumbnail-container {
+  background-color: #282828;
+}
+/* line 121, sass/style.sass */
+.banner-3 .thumbnail-container .image-active {
+  border: 3px solid #ff9500;
+}
+/* line 123, sass/style.sass */
+.banner-3 .gallery {
+  background-color: #464646;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
 
+/* line 128, sass/style.sass */
 .footer-1 {
   background-color: #464646;
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+}
 
-  .footer-2 {
-    background-color: #464646;
-    padding-bottom: 10px; }
-    .footer-2 .col-md-4 {
-      border-top: 3px solid #969696;
-      padding-top: 10px; }
+/* line 133, sass/style.sass */
+.footer-2 {
+  background-color: #464646;
+  padding-bottom: 10px;
+}
+/* line 136, sass/style.sass */
+.footer-2 .col-md-4 {
+  border-top: 3px solid #969696;
+  padding-top: 10px;
+}
 
+/* line 140, sass/style.sass */
 .b {
-  border: 1px solid blue; }
+  border: 1px solid blue;
+}
 
-  .thumbnail-box {
-    padding: 0;
-    border: 1px solid #282828; }
-    .thumbnail-box img {
-      height: 100%;
-      width: 100%; }
+/* line 143, sass/style.sass */
+.thumbnail-box {
+  padding: 0;
+  border: 2px solid #282828;
+}
+/* line 146, sass/style.sass */
+.thumbnail-box img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 152, sass/style.sass */
+.show-animation.ng-hide-remove {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  display: block !important;
+  opacity: 1;
+}
+
+/* line 159, sass/style.sass */
+.show-animation.ng-hide {
+  opacity: 0;
+}
